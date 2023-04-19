@@ -7,6 +7,7 @@ import Video from "../images/video.svg";
 import Downloads from "../images/download.svg";
 import Gift from "../images/gift.svg";
 import '../styles/global.css';
+import {SEO} from "../components/seo";
 
 const YouTubeDownloader = () => {
   const [open, setOpen] = useState(false);
@@ -424,3 +425,7 @@ const YouTubeDownloader = () => {
 };
 
 export default YouTubeDownloader;
+
+export const Head = () => (
+  <SEO title="Page Two"  />
+)
