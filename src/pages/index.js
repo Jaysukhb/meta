@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import {Link, navigate} from "gatsby";
-import Logo from "../images/logo.png";
-import Quality from "../images/quality.svg";
-import Video from "../images/video.svg";
-import Downloads from "../images/download.svg";
-import Gift from "../images/gift.svg";
+import {StaticImage} from "gatsby-plugin-image"
 import '../styles/global.css';
 
 const YouTubeDownloader = () => {
@@ -79,7 +75,7 @@ const YouTubeDownloader = () => {
             <div className="flex justify-between items-center">
               <div className="lg:w-0 lg:flex-1">
                 <Link to="/" className="flex items-center">
-                  <img width="46" height="46" src={Logo} alt="y2meta"/>
+                  <StaticImage src="../images/logo.png" loading="eager" alt="y2meta" width={50} quality={50}/>
                   <h1 className="text-2xl font-semibold w-auto z-50 pl-2">y2meta</h1>
                 </Link>
               </div>
@@ -230,7 +226,7 @@ const YouTubeDownloader = () => {
             </div>
             <p className="text-xs	p-1.5 text-btn-border md:mb-6 mb-5">
               By using our service you are accepting our
-              <Link className="text-heading-clr" to="/terms-condition"> Term and Conditions.</Link>
+              <Link className="text-heading-clr" to="/terms-condition">&nbsp;Term and Conditions.</Link>
             </p>
           </div>
         </section>
@@ -238,10 +234,10 @@ const YouTubeDownloader = () => {
           <div className="md:py-8 py-6 text-center">
             <h2 className="font-bold text-xl my-2.5 md:text-2xl">Best YouTube Video Downloader</h2>
             <h3 className="text-lg text-justify	my-2.5">
-              <Link className="text-[#551A8B] mr-1" to="https://y2meta.mobi/">
+              <Link className="text-[#551A8B]" to="https://y2meta.mobi/">
                 Y2meta
               </Link>
-              is the most popular YouTube Downloader which allows you to Download YouTube videos for free. No need to
+              &nbsp;is the most popular YouTube Downloader which allows you to Download YouTube videos for free. No need to
               install third-party Applications and software to save YouTube videos on Your personal device. Just You
               require a reliable browser and internet connection. Enjoy downloading your favorite videos from YouTube,
               Facebook, Video, Dailymotion, Youku, and other social sharing websites with the quality you want. Y2meta
@@ -284,7 +280,7 @@ const YouTubeDownloader = () => {
           <div
             className="md:py-8 py-6 text-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             <div>
-              <img className="inline" src={Quality} width="50" height="50" alt="quality"/>
+              <StaticImage src="../images/quality.svg" loading="eager" alt="quality" width={50} quality={50}/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">100% Safe and Free</h3>
                 <p>
@@ -294,7 +290,7 @@ const YouTubeDownloader = () => {
               </div>
             </div>
             <div>
-              <img className="inline" src={Video} width="50" height="50" alt="video"/>
+              <StaticImage src="../images/video.svg" loading="eager" alt="video" width={50} quality={50}/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Video Fast and Easily</h3>
                 <p>
@@ -305,7 +301,7 @@ const YouTubeDownloader = () => {
               </div>
             </div>
             <div>
-              <img className="inline" src={Downloads} width="50" height="50" alt="download"/>
+              <StaticImage src="../images/download.svg" loading="eager" alt="gift" width={50} quality={50}/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Unlimited YouTube Videos</h3>
                 <p>
@@ -315,7 +311,7 @@ const YouTubeDownloader = () => {
               </div>
             </div>
             <div>
-              <img className="inline" src={Gift} width="50" height="50" alt="gift"/>
+              <StaticImage src="../images/gift.svg" loading="eager" alt="gift" width={50} quality={50}/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Support Multiple quality</h3>
                 <p>
@@ -369,7 +365,7 @@ const YouTubeDownloader = () => {
       </div>
       <footer>
         <div className="md:py-14 py-5	text-sm	text-center border-solid	border-y border-inherit">
-          <p className="mb-5	">@2023 y2meta.mobi</p>
+          <p className="mb-5">@2023 y2meta.mobi</p>
           <ul className="flex justify-center">
             <li><Link className="mx-2" to="/about-us/">About</Link></li>
             <li><Link className="mx-2" to="/contact/">Contact</Link></li>
@@ -398,9 +394,9 @@ export const Head = () => (
     <meta
       property="og:description"
       content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
-    <meta property="og:image" content="/icons/icon-256x256.png"/>
+    <meta property="og:image" content="https://y2meta.mobi/icons/icon-256x256.png"/>
     <meta property="og:url" content="https://y2meta.mobi/"/>
-    <link rel="icon" href="/icons/icon-256x256.png"/>
+    <link rel="icon" href="https://y2meta.mobi/icons/icon-256x256.png"/>
     <link rel="canonical" href="https://y2meta.mobi/"/>
     <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/"/>
     <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/"/>
