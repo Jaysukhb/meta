@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import {Helmet} from "react-helmet";
 import {Link, navigate} from "gatsby";
-import Logo from "../images/logo.png";
-import Quality from "../images/quality.svg";
-import Video from "../images/video.svg";
-import Downloads from "../images/download.svg";
-import Gift from "../images/gift.svg";
-import '../styles/global.css';
+import Logo from "../../images/logo.png";
+import Quality from "../../images/quality.svg";
+import Video from "../../images/video.svg";
+import Downloads from "../../images/download.svg";
+import Gift from "../../images/gift.svg";
+import '../../styles/global.css';
 
 const YouTubeDownloader = () => {
   const [open, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState("test");
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState("ar");
   const [openLanguage, setOpenLanguage] = useState(false);
 
   const handleLanguageChange = (language) => {
@@ -33,18 +33,18 @@ const YouTubeDownloader = () => {
   const handleClickEnter = (e) => {
     if (e.keyCode === 13) {
       if (isYtUrl(inputValue)) {
-        navigate("/download", { state: { url: inputValue }});
+        navigate("/download", {state: {url: inputValue}});
       } else {
-        navigate("/search", { state: { url: inputValue }});
+        navigate("/search", {state: {url: inputValue}});
       }
     }
   };
 
   const handleClickConvert = () => {
     if (isYtUrl(inputValue)) {
-      navigate("/download", { state: { url: inputValue }});
+      navigate("/download", {state: {url: inputValue}});
     } else {
-      navigate("/search", { state: { url: inputValue }});
+      navigate("/search", {state: {url: inputValue}});
     }
   };
 
@@ -75,22 +75,22 @@ const YouTubeDownloader = () => {
   return (
     <>
       <Helmet>
-        <title>Y2meta - Free Youtube Downloader | Download Youtube Video</title>
+        <title>Y2meta - تنزيل يوتيوب مجاني | تحميل يوتيوب فيديو</title>
         <meta
           name="description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+          content="Y2meta هي أداة تنزيل YouTube مجانية شهيرة تسمح بتنزيل فيديو YouTube مجانًا بجودة عالية بدقة 1080 بكسل و 2160 بكسل و 2 كيلو و 4 كيلو و 8 كيلو بدون تثبيت البرنامج."/>
         <meta name="robots" content="noindex,nofollow"/>
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Y2meta"/>
-        <meta property="og:locale" content="en"/>
-        <meta property="og:title" content="Y2meta - Free Youtube Downloader | Download Youtube Video"/>
+        <meta property="og:locale" content="ar"/>
+        <meta property="og:title" content="Y2meta - تنزيل يوتيوب مجاني | تحميل يوتيوب فيديو"/>
         <meta
           property="og:description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+          content="Y2meta هي أداة تنزيل YouTube مجانية شهيرة تسمح بتنزيل فيديو YouTube مجانًا بجودة عالية بدقة 1080 بكسل و 2160 بكسل و 2 كيلو و 4 كيلو و 8 كيلو بدون تثبيت البرنامج."/>
         <meta property="og:image" content={Logo}/>
-        <meta property="og:url" content="https://y2meta.mobi/"/>
+        <meta property="og:url" content="https://y2meta.mobi/ar/"/>
         <link rel="icon" href={Logo}/>
-        <link rel="canonical" href="https://y2meta.mobi/"/>
+        <link rel="canonical" href="https://y2meta.mobi/ar/"/>
         <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/"/>
         <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/"/>
         <link rel="alternate" hrefLang="es" href="https://y2meta.mobi/es/"/>
@@ -119,7 +119,7 @@ const YouTubeDownloader = () => {
           <div className="container mx-auto">
             <div className="flex justify-between items-center">
               <div className="lg:w-0 lg:flex-1">
-                <Link to="/" className="flex items-center">
+                <Link to="/ar/" className="flex items-center">
                   <img width="46" height="46" src={Logo} alt="y2meta"/>
                   <h1 className="text-2xl font-semibold w-auto z-50 pl-2">y2meta</h1>
                 </Link>
@@ -147,21 +147,21 @@ const YouTubeDownloader = () => {
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/">
+                      to="/ar/">
                       YouTube Downloader
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp3">
+                      to="/ar/youtube-to-mp3/">
                       YouTube to MP3
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp4">
+                      to="/ar/youtube-to-mp4/">
                       YouTube to MP4
                     </Link>
                   </li>
@@ -202,21 +202,21 @@ const YouTubeDownloader = () => {
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/">
+                            to="/ar/">
                             YouTube Downloader
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp3">
+                            to="/ar/youtube-to-mp3/">
                             YouTube to MP3
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp4">
+                            to="/ar/youtube-to-mp4/">
                             YouTube to MP4
                           </Link>
                         </li>
@@ -251,73 +251,69 @@ const YouTubeDownloader = () => {
         </header>
         <section className="bg-white p-4 border border-solid rounded border-current border-solid-clr container mx-auto">
           <div className="md:py-8 py-7 text-center">
-            <h1 className="mb-2.5 md:text-3xl text-2xl font-medium">Y2meta - YouTube Video Downloader</h1>
-            <p>Download YouTube videos in MP3, and MP4 high quality for free</p>
+            <h1 className="mb-2.5 md:text-3xl text-2xl font-medium">Y2meta - برنامج تنزيل فيديو من اليوتيوب</h1>
+            <p>قم بتنزيل مقاطع فيديو YouTube بصيغة MP3 و MP4 بجودة عالية مجانًا</p>
             <div className="flex justify-center md:mt-9 mt-6">
               <div className="flex w-[600px]">
                 <input
                   type="text"
                   className="block md:text-base	text-sm w-full px-4 py-2 h-[60px] border-4 !outline-none border-solid rounded border-btn-clr"
-                  placeholder="Search or paste youtube link here..."
+                  placeholder="ابحث أو الصق رابط youtube هنا ..."
                   onChange={handleInputChange}
                   onKeyDown={handleClickEnter}
                 />
                 <button
                   className="md:px-4 rounded-r md:text-base	text-sm md:w-[120px] w-[78px] h-[60px] -ml-1 text-white bg-btn-clr"
                   onClick={handleClickConvert}>
-                  Search
+                  يبحث
                 </button>
               </div>
             </div>
             <p className="text-xs	p-1.5 text-btn-border md:mb-6 mb-5">
-              By using our service you are accepting our
-              <Link className="text-heading-clr" to="/terms-condition"> Term and Conditions.</Link>
+              باستخدام خدمتنا ، فإنك تقبل
+              <Link className="text-heading-clr" to="/terms-condition"> الشروط والأحكام الخاصة بنا.</Link>
             </p>
           </div>
         </section>
         <section>
           <div className="md:py-8 py-6 text-center">
-            <h2 className="font-bold text-xl my-2.5 md:text-2xl">Best YouTube Video Downloader</h2>
+            <h2 className="font-bold text-xl my-2.5 md:text-2xl">أفضل برنامج تنزيل فيديو من اليوتيوب</h2>
             <h3 className="text-lg text-justify	my-2.5">
-              <Link className="text-[#551A8B] mr-1" to="https://y2meta.mobi/">
-                Y2meta
-              </Link>
-              is the most popular YouTube Downloader which allows you to Download YouTube videos for free. No need to
-              install third-party Applications and software to save YouTube videos on Your personal device. Just You
-              require a reliable browser and internet connection. Enjoy downloading your favorite videos from YouTube,
-              Facebook, Video, Dailymotion, Youku, and other social sharing websites with the quality you want. Y2meta
-              provides the safest way to Download YouTube videos with HD Quality and no require to login or share
-              personal
-              information.
+              Y2meta هو برنامج تنزيل YouTube الأكثر شعبية والذي يسمح لك بتنزيل مقاطع فيديو YouTube مجانًا. لا حاجة
+              لتثبيت تطبيقات وبرامج الطرف الثالث لحفظ مقاطع فيديو YouTube على جهازك الشخصي. فقط أنت بحاجة إلى متصفح
+              موثوق واتصال بالإنترنت. استمتع بتنزيل مقاطع الفيديو المفضلة لديك من YouTube و Facebook و Video و
+              Dailymotion و Youku ومواقع المشاركة الاجتماعية الأخرى بالجودة التي تريدها. يوفر Y2meta الطريقة الأكثر
+              أمانًا لتنزيل مقاطع فيديو YouTube بجودة HD ولا يتطلب تسجيل الدخول أو مشاركة المعلومات الشخصية.
             </h3>
             <h3 className="text-lg text-justify	my-2.5">
-              Download YouTube audio and video in various formats such as MP3, WEBM, MP4, M4V, 3GP, WMV, FLV, MO, etc,
-              and different MP3 bit rates including 64kbps, 128kbps, 192kbps, 256kbps and 320kbps. Y2meta works smoothly
-              on your computer, mobile, Tablet, and other Device. it's a simple and Easy YouTube Downloader.
+              قم بتنزيل الصوت والفيديو على YouTube بتنسيقات مختلفة مثل MP3 و WEBM و MP4 و M4V و 3GP و WMV و FLV و MO
+              وغيرها ، ومعدلات بت MP3 مختلفة بما في ذلك 64 كيلوبت في الثانية و 128 كيلوبت في الثانية و 192 كيلوبت في
+              الثانية و 256 كيلوبت في الثانية و 320 كيلوبت في الثانية. يعمل Y2meta بسلاسة على جهاز الكمبيوتر والجوال
+              والجهاز اللوحي والجهاز الآخر. إنه برنامج تنزيل YouTube بسيط وسهل.
             </h3>
           </div>
           <hr className="w-48 h-px mx-auto bg-gray-200 border-0 rounded dark:bg-gray-700"/>
           <div className="py-8 md:flex md:justify-between">
             <div className="md:w-[43%]">
-              <h4 className="text-lg my-1.5"><strong>How to download YouTube videos using Y2meta?</strong></h4>
+              <h4 className="text-lg my-1.5"><strong>كيفية تنزيل مقاطع فيديو YouTube باستخدام Y2meta؟</strong></h4>
               <ol className="m-0 pl-4 list-decimal text-justify">
                 <li className="mb-2.5">
-                  Open YouTube website and copy YouTube URL that you want to download to your Device
+                  افتح موقع YouTube وانسخ عنوان URL الخاص بـ YouTube الذي تريد تنزيله على جهازك
                 </li>
-                <li className="mb-2.5">Paste Copied URL into Y2meta Search box and choose MP4 or MP3 format</li>
+                <li className="mb-2.5">الصق عنوان URL المنسوخ في مربع البحث Y2meta واختر تنسيق MP4 أو MP3</li>
                 <li className="mb-2.5">
-                  Wait a few seconds till conversion is completed and press the "Download" button
+                  انتظر بضع ثوان حتى يكتمل التحويل واضغط على الزر "تنزيل"
                 </li>
               </ol>
             </div>
             <div className="md:w-[43%]">
-              <h5 className="text-lg my-1.5"><strong>Y2meta Advantages</strong></h5>
+              <h5 className="text-lg my-1.5"><strong>مزايا Y2meta</strong></h5>
               <ul className="m-0 pl-4 list-disc text-justify">
-                <li className="mb-2.5">Convert and download unlimited YouTube videos Free of cost</li>
-                <li className="mb-2.5">Fast and easy way to download and save any YouTube video</li>
-                <li className="mb-2.5">Our YouTube downloader fully compatible with all devices</li>
-                <li className="mb-2.5">It's always free and doesn't need to registration</li>
-                <li className="mb-2.5">We provide high-quality audio and video files</li>
+                <li className="mb-2.5">قم بتحويل وتنزيل مقاطع فيديو YouTube غير محدودة مجانًا</li>
+                <li className="mb-2.5">طريقة سريعة وسهلة لتنزيل وحفظ أي فيديو يوتيوب</li>
+                <li className="mb-2.5">برنامج تنزيل YouTube الخاص بنا متوافق تمامًا مع جميع الأجهزة</li>
+                <li className="mb-2.5">إنه مجاني دائمًا ولا يحتاج إلى التسجيل</li>
+                <li className="mb-2.5">نحن نقدم ملفات صوت وفيديو عالية الجودة</li>
               </ul>
             </div>
           </div>
@@ -325,85 +321,84 @@ const YouTubeDownloader = () => {
           <div
             className="md:py-8 py-6 text-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             <div>
-              <img className="inline h-[50px]" src={Quality} alt="quality"/>
+              <img className="inline" src={Quality} width="50" height="50" alt="quality"/>
               <div className="px-6 py-4">
-                <h3 className="text-2xl text-heading-clr font-bold mb-2">100% Safe and Free</h3>
+                <h3 className="text-2xl text-heading-clr font-bold mb-2">100٪ آمن ومجاني</h3>
                 <p>
-                  Y2meta offers download mp3 and mp4 from YouTube totally free. Also this YouTube Video Downloader
-                  totally safe and secure from viruses and Malware.
+                  تقدم Y2meta تنزيل mp3 و mp4 من YouTube مجانًا تمامًا. كما أن أداة تنزيل الفيديو من YouTube هذه آمنة
+                  تمامًا وآمنة من الفيروسات والبرامج الضارة.
                 </p>
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Video} alt="video"/>
+              <img className="inline" src={Video} width="50" height="50" alt="video"/>
               <div className="px-6 py-4">
-                <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Video Fast and Easily</h3>
+                <h3 className="text-2xl text-heading-clr font-bold mb-2">تحميل الفيديو بسرعة وسهولة</h3>
                 <p>
-                  Y2meta tool helps you to download MP3 and MP4 from YouTube quickly. Simply paste copied YouTube URL
-                  into the search box and click on the "Convert" button. just follow the simple steps to Download
-                  YouTube Video.
+                  تساعدك أداة Y2meta على تنزيل ملفات MP3 و MP4 من YouTube بسرعة. ما عليك سوى لصق عنوان URL المنسوخ على
+                  YouTube في مربع البحث والنقر فوق الزر "تحويل". ما عليك سوى اتباع الخطوات البسيطة لتنزيل فيديو YouTube.
                 </p>
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Downloads} alt="download"/>
+              <img className="inline" src={Downloads} width="50" height="50" alt="download"/>
               <div className="px-6 py-4">
-                <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Unlimited YouTube Videos</h3>
+                <h3 className="text-2xl text-heading-clr font-bold mb-2">قم بتنزيل مقاطع فيديو YouTube غير محدودة</h3>
                 <p>
-                  Using this Y2meta Downloader Download YouTube Videos as much as you want without any limitations.
-                  it's completely free and no need to register and login.
+                  باستخدام Y2meta Downloader هذا ، قم بتنزيل مقاطع فيديو YouTube بقدر ما تريد دون أي قيود. إنه مجاني
+                  تمامًا ولا داعي للتسجيل والدخول.
                 </p>
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Gift} alt="gift"/>
+              <img className="inline" src={Gift} width="50" height="50" alt="gift"/>
               <div className="px-6 py-4">
-                <h3 className="text-2xl text-heading-clr font-bold mb-2">Support Multiple quality</h3>
+                <h3 className="text-2xl text-heading-clr font-bold mb-2">دعم جودة متعددة</h3>
                 <p>
-                  Y2meta offers multiple Audio and video qualities so you can convert YouTube Videos to MP3, 3GP, MP4,
-                  WMA, M4A, FLV, WEBM, MO formats, etc.
+                  تقدم Y2meta جودة صوت وفيديو متعددة حتى تتمكن من تحويل مقاطع فيديو YouTube إلى تنسيقات MP3 و 3GP و MP4
+                  و WMA و M4A و FLV و WEBM و MO وما إلى ذلك.
                 </p>
               </div>
             </div>
           </div>
           <hr className="w-48 h-px mx-auto bg-gray-200 border-0 rounded dark:bg-gray-700"/>
           <div className="md:py-8 py-6">
-            <h2 className="font-bold text-center text-xl my-2.5 md:text-2xl">FAQ</h2>
-            <h3 className="mt-2.5 font-semibold">What is Y2meta?</h3>
+            <h2 className="font-bold text-center text-xl my-2.5 md:text-2xl">التعليمات</h2>
+            <h3 className="mt-2.5 font-semibold">ما هو Y2meta؟</h3>
             <p>
-              Y2meta is best YouTube Video Downloader that allow you to Download Video from YouTube quickly and for
-              Free. also, convert YouTube to Mp3 in high quality.
+              Y2meta هو أفضل برنامج لتنزيل مقاطع الفيديو من YouTube والذي يسمح لك بتنزيل الفيديو من YouTube بسرعة
+              ومجانًا. أيضا ، تحويل يوتيوب إلى MP3 بجودة عالية.
             </p>
-            <h3 className="mt-2.5 font-semibold">Is Y2meta Totally Free?</h3>
+            <h3 className="mt-2.5 font-semibold">هل Y2meta مجاني تمامًا؟</h3>
             <p>
-              Yes, Y2meta is completely free to use and download YouTube videos. you don't need to pay any subscription
-              amount just need the YouTube video URL that You want to download on your device.
+              نعم ، Y2meta مجاني تمامًا لاستخدام وتنزيل مقاطع فيديو YouTube. لست بحاجة إلى دفع أي مبلغ اشتراك ، فقط
+              تحتاج إلى عنوان URL لفيديو YouTube الذي تريد تنزيله على جهازك.
             </p>
-            <h3 className="mt-2.5 font-semibold">How to download YouTube videos to iPhone?</h3>
+            <h3 className="mt-2.5 font-semibold">كيفية تنزيل مقاطع فيديو YouTube على iPhone؟</h3>
             <p>
-              The process of iPhone users is slightly different from All use. You need to use Safari browser on iOS 13
-              or get Documents by Readdle app and all process is the same as above.
+              تختلف عملية مستخدمي iPhone قليلاً عن جميع الاستخدامات. تحتاج إلى استخدام متصفح Safari على نظام iOS 13 أو
+              الحصول على المستندات من خلال تطبيق Readdle وجميع العمليات هي نفسها كما هو مذكور أعلاه.
             </p>
-            <h3 className="mt-2.5 font-semibold">Is Y2meta safe to download Videos from YouTube?</h3>
+            <h3 className="mt-2.5 font-semibold">هل Y2meta آمن لتنزيل مقاطع الفيديو من YouTube؟</h3>
             <p>
-              Yes, Download YouTube Videos using our Downloader you don't need to share any personal information and
-              Also don't need to install third-party applications and software on your devices.
+              نعم ، قم بتنزيل مقاطع فيديو YouTube باستخدام أداة التنزيل الخاصة بنا ، فأنت لست بحاجة إلى مشاركة أي
+              معلومات شخصية ولا تحتاج أيضًا إلى تثبيت تطبيقات وبرامج تابعة لجهات خارجية على أجهزتك.
             </p>
-            <h3 className="mt-2.5 font-semibold">What are the supported video/audio formats?</h3>
+            <h3 className="mt-2.5 font-semibold">ما هي تنسيقات الفيديو / الصوت المدعومة؟</h3>
             <p>
-              We provide various high-quality formats and allow you to download mp3 in 320kbps, 256kbps, 192kbps,
-              128kbps, 64kbps bit rate and mp4 with 720p, 1080p, 1440p, 2160p quality.
+              نحن نقدم العديد من التنسيقات عالية الجودة ونسمح لك بتنزيل mp3 بجودة 320 كيلو بايت في الثانية و 256 كيلو
+              بايت في الثانية و 192 كيلو بت في الثانية و 128 كيلو بت في الثانية ومعدل بت 64 كيلو بت في الثانية و mp4
+              بجودة 720 بكسل و 1080 بكسل و 1440 بكسل و 2160 بكسل.
             </p>
-            <h3 className="mt-2.5 font-semibold">Where is the downloaded YouTube video file stored on my device?</h3>
+            <h3 className="mt-2.5 font-semibold">أين يتم تخزين ملف فيديو YouTube الذي تم تنزيله على جهازي؟</h3>
             <p>
-              After video is saved to your computer from Youtube then check directly in your browser "download history"
-              or "Downloads" folder in your device.
+              بعد حفظ الفيديو على جهاز الكمبيوتر الخاص بك من Youtube ، تحقق مباشرة في متصفحك من "سجل التنزيل" أو مجلد
+              "التنزيلات" في جهازك.
             </p>
-            <h3 className="mt-2.5 font-semibold">Is this YouTube video downloader compatible with all devices?</h3>
+            <h3 className="mt-2.5 font-semibold">هل برنامج تنزيل فيديو YouTube هذا متوافق مع جميع الأجهزة؟</h3>
             <p>
-              Yes, Y2meta supports downloading videos from YouTube works smoothly on all devices such as computers,
-              mobile, and tablets, and all types of browsers like Chrome, Firefox, Microsoft Edge, Safari, Opera and
-              etc.
+              نعم ، يدعم Y2meta تنزيل مقاطع الفيديو من YouTube ويعمل بسلاسة على جميع الأجهزة مثل أجهزة الكمبيوتر والجوال
+              والأجهزة اللوحية وجميع أنواع المتصفحات مثل Chrome و Firefox و Microsoft Edge و Safari و Opera وغيرها.
             </p>
           </div>
         </section>

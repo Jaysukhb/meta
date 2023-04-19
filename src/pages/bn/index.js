@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import {Helmet} from "react-helmet";
 import {Link, navigate} from "gatsby";
-import Logo from "../images/logo.png";
-import Quality from "../images/quality.svg";
-import Video from "../images/video.svg";
-import Downloads from "../images/download.svg";
-import Gift from "../images/gift.svg";
-import '../styles/global.css';
+import Logo from "../../images/logo.png";
+import Quality from "../../images/quality.svg";
+import Video from "../../images/video.svg";
+import Downloads from "../../images/download.svg";
+import Gift from "../../images/gift.svg";
+import '../../styles/global.css';
 
 const YouTubeDownloader = () => {
   const [open, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState("test");
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState("bn");
   const [openLanguage, setOpenLanguage] = useState(false);
 
   const handleLanguageChange = (language) => {
@@ -75,22 +75,22 @@ const YouTubeDownloader = () => {
   return (
     <>
       <Helmet>
-        <title>Y2meta - Free Youtube Downloader | Download Youtube Video</title>
+        <title>Y2meta - বিনামূল্যে ইউটিউব ডাউনলোডার | ইউটিউব ভিডিও ডাউনলোড করুন</title>
         <meta
           name="description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+          content="Y2meta জনপ্রিয় ফ্রি ইউটিউব ডাউনলোডার সফ্টওয়্যার ইনস্টল ছাড়াই 1080p, 2160p, 2k, 4k, 8k-এ উচ্চ মানের সাথে বিনামূল্যে YouTube ভিডিও ডাউনলোড করার অনুমতি দেয়।"/>
         <meta name="robots" content="noindex,nofollow"/>
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Y2meta"/>
-        <meta property="og:locale" content="en"/>
-        <meta property="og:title" content="Y2meta - Free Youtube Downloader | Download Youtube Video"/>
+        <meta property="og:locale" content="bn"/>
+        <meta property="og:title" content="Y2meta - বিনামূল্যে ইউটিউব ডাউনলোডার | ইউটিউব ভিডিও ডাউনলোড করুন"/>
         <meta
           property="og:description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+          content="Y2meta জনপ্রিয় ফ্রি ইউটিউব ডাউনলোডার সফ্টওয়্যার ইনস্টল ছাড়াই 1080p, 2160p, 2k, 4k, 8k-এ উচ্চ মানের সাথে বিনামূল্যে YouTube ভিডিও ডাউনলোড করার অনুমতি দেয়।"/>
         <meta property="og:image" content={Logo}/>
-        <meta property="og:url" content="https://y2meta.mobi/"/>
+        <meta property="og:url" content="https://y2meta.mobi/bn/"/>
         <link rel="icon" href={Logo}/>
-        <link rel="canonical" href="https://y2meta.mobi/"/>
+        <link rel="canonical" href="https://y2meta.mobi/bn/"/>
         <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/"/>
         <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/"/>
         <link rel="alternate" hrefLang="es" href="https://y2meta.mobi/es/"/>
@@ -119,7 +119,7 @@ const YouTubeDownloader = () => {
           <div className="container mx-auto">
             <div className="flex justify-between items-center">
               <div className="lg:w-0 lg:flex-1">
-                <Link to="/" className="flex items-center">
+                <Link to="/bn/" className="flex items-center">
                   <img width="46" height="46" src={Logo} alt="y2meta"/>
                   <h1 className="text-2xl font-semibold w-auto z-50 pl-2">y2meta</h1>
                 </Link>
@@ -147,21 +147,21 @@ const YouTubeDownloader = () => {
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/">
+                      to="/bn/">
                       YouTube Downloader
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp3">
+                      to="/bn/youtube-to-mp3/">
                       YouTube to MP3
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp4">
+                      to="/bn/youtube-to-mp4/">
                       YouTube to MP4
                     </Link>
                   </li>
@@ -202,21 +202,21 @@ const YouTubeDownloader = () => {
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/">
+                            to="/bn/">
                             YouTube Downloader
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp3">
+                            to="/bn/youtube-to-mp3/">
                             YouTube to MP3
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp4">
+                            to="/bn/youtube-to-mp4/">
                             YouTube to MP4
                           </Link>
                         </li>
@@ -251,73 +251,62 @@ const YouTubeDownloader = () => {
         </header>
         <section className="bg-white p-4 border border-solid rounded border-current border-solid-clr container mx-auto">
           <div className="md:py-8 py-7 text-center">
-            <h1 className="mb-2.5 md:text-3xl text-2xl font-medium">Y2meta - YouTube Video Downloader</h1>
-            <p>Download YouTube videos in MP3, and MP4 high quality for free</p>
+            <h1 className="mb-2.5 md:text-3xl text-2xl font-medium">Y2meta - YouTube ভিডিও ডাউনলোডার</h1>
+            <p>বিনামূল্যের জন্য MP3, এবং MP4 উচ্চ মানের YouTube ভিডিও ডাউনলোড করুন</p>
             <div className="flex justify-center md:mt-9 mt-6">
               <div className="flex w-[600px]">
                 <input
                   type="text"
                   className="block md:text-base	text-sm w-full px-4 py-2 h-[60px] border-4 !outline-none border-solid rounded border-btn-clr"
-                  placeholder="Search or paste youtube link here..."
+                  placeholder="এখানে ইউটিউব লিঙ্ক অনুসন্ধান বা পেস্ট করুন..."
                   onChange={handleInputChange}
                   onKeyDown={handleClickEnter}
                 />
                 <button
                   className="md:px-4 rounded-r md:text-base	text-sm md:w-[120px] w-[78px] h-[60px] -ml-1 text-white bg-btn-clr"
                   onClick={handleClickConvert}>
-                  Search
+                  অনুসন্ধান করুন
                 </button>
               </div>
             </div>
             <p className="text-xs	p-1.5 text-btn-border md:mb-6 mb-5">
-              By using our service you are accepting our
-              <Link className="text-heading-clr" to="/terms-condition"> Term and Conditions.</Link>
+              আমাদের পরিষেবা ব্যবহার করে আপনি আমাদের
+              <Link className="text-heading-clr" to="/terms-condition"> শর্তাবলী স্বীকার করছেন।</Link>
             </p>
           </div>
         </section>
         <section>
           <div className="md:py-8 py-6 text-center">
-            <h2 className="font-bold text-xl my-2.5 md:text-2xl">Best YouTube Video Downloader</h2>
+            <h2 className="font-bold text-xl my-2.5 md:text-2xl">সেরা ইউটিউব ভিডিও ডাউনলোডার</h2>
             <h3 className="text-lg text-justify	my-2.5">
-              <Link className="text-[#551A8B] mr-1" to="https://y2meta.mobi/">
-                Y2meta
-              </Link>
-              is the most popular YouTube Downloader which allows you to Download YouTube videos for free. No need to
-              install third-party Applications and software to save YouTube videos on Your personal device. Just You
-              require a reliable browser and internet connection. Enjoy downloading your favorite videos from YouTube,
-              Facebook, Video, Dailymotion, Youku, and other social sharing websites with the quality you want. Y2meta
-              provides the safest way to Download YouTube videos with HD Quality and no require to login or share
-              personal
-              information.
+              Y2meta হল সবচেয়ে জনপ্রিয় YouTube ডাউনলোডার যা আপনাকে বিনামূল্যে YouTube ভিডিও ডাউনলোড করতে দেয়। আপনার ব্যক্তিগত ডিভাইসে YouTube ভিডিও সংরক্ষণ করতে তৃতীয় পক্ষের অ্যাপ্লিকেশন এবং সফ্টওয়্যার ইনস্টল করার প্রয়োজন নেই৷ শুধু আপনার একটি নির্ভরযোগ্য ব্রাউজার এবং ইন্টারনেট সংযোগ প্রয়োজন। ইউটিউব, ফেসবুক, ভিডিও, ডেইলিমোশন, ইউকু এবং অন্যান্য সামাজিক শেয়ারিং ওয়েবসাইটগুলি থেকে আপনার পছন্দের মানের সাথে আপনার পছন্দের ভিডিওগুলি ডাউনলোড করে উপভোগ করুন৷ Y2meta HD কোয়ালিটির সাথে YouTube ভিডিও ডাউনলোড করার সবচেয়ে নিরাপদ উপায় প্রদান করে এবং লগইন বা ব্যক্তিগত তথ্য শেয়ার করার প্রয়োজন নেই।
             </h3>
             <h3 className="text-lg text-justify	my-2.5">
-              Download YouTube audio and video in various formats such as MP3, WEBM, MP4, M4V, 3GP, WMV, FLV, MO, etc,
-              and different MP3 bit rates including 64kbps, 128kbps, 192kbps, 256kbps and 320kbps. Y2meta works smoothly
-              on your computer, mobile, Tablet, and other Device. it's a simple and Easy YouTube Downloader.
+              YouTube অডিও এবং ভিডিও বিভিন্ন ফরম্যাটে ডাউনলোড করুন যেমন MP3, WEBM, MP4, M4V, 3GP, WMV, FLV, MO, ইত্যাদি এবং 64kbps, 128kbps, 192kbps, 256kbps এবং 320kbps সহ বিভিন্ন MP3 বিট রেট। Y2meta আপনার কম্পিউটার, মোবাইল, ট্যাবলেট এবং অন্যান্য ডিভাইসে মসৃণভাবে কাজ করে। এটি একটি সহজ এবং সহজ YouTube ডাউনলোডার।
             </h3>
           </div>
           <hr className="w-48 h-px mx-auto bg-gray-200 border-0 rounded dark:bg-gray-700"/>
           <div className="py-8 md:flex md:justify-between">
             <div className="md:w-[43%]">
-              <h4 className="text-lg my-1.5"><strong>How to download YouTube videos using Y2meta?</strong></h4>
+              <h4 className="text-lg my-1.5"><strong>কিভাবে Y2meta ব্যবহার করে YouTube ভিডিও ডাউনলোড করবেন?</strong></h4>
               <ol className="m-0 pl-4 list-decimal text-justify">
                 <li className="mb-2.5">
-                  Open YouTube website and copy YouTube URL that you want to download to your Device
+                  YouTube ওয়েবসাইট খুলুন এবং YouTube URL অনুলিপি করুন যা আপনি আপনার ডিভাইসে ডাউনলোড করতে চান
                 </li>
-                <li className="mb-2.5">Paste Copied URL into Y2meta Search box and choose MP4 or MP3 format</li>
+                <li className="mb-2.5">Y2meta অনুসন্ধান বাক্সে অনুলিপি করা URL পেস্ট করুন এবং MP4 বা MP3 বিন্যাস চয়ন করুন</li>
                 <li className="mb-2.5">
-                  Wait a few seconds till conversion is completed and press the "Download" button
+                  রূপান্তর সম্পূর্ণ না হওয়া পর্যন্ত কয়েক সেকেন্ড অপেক্ষা করুন এবং "ডাউনলোড" বোতাম টিপুন
                 </li>
               </ol>
             </div>
             <div className="md:w-[43%]">
-              <h5 className="text-lg my-1.5"><strong>Y2meta Advantages</strong></h5>
+              <h5 className="text-lg my-1.5"><strong>Y2meta সুবিধা</strong></h5>
               <ul className="m-0 pl-4 list-disc text-justify">
-                <li className="mb-2.5">Convert and download unlimited YouTube videos Free of cost</li>
-                <li className="mb-2.5">Fast and easy way to download and save any YouTube video</li>
-                <li className="mb-2.5">Our YouTube downloader fully compatible with all devices</li>
-                <li className="mb-2.5">It's always free and doesn't need to registration</li>
-                <li className="mb-2.5">We provide high-quality audio and video files</li>
+                <li className="mb-2.5">বিনামূল্যে সীমাহীন YouTube ভিডিও রূপান্তর এবং ডাউনলোড করুন</li>
+                <li className="mb-2.5">যেকোনো ইউটিউব ভিডিও ডাউনলোড এবং সেভ করার দ্রুত এবং সহজ উপায়</li>
+                <li className="mb-2.5">আমাদের YouTube ডাউনলোডার সমস্ত ডিভাইসের সাথে সম্পূর্ণরূপে সামঞ্জস্যপূর্ণ</li>
+                <li className="mb-2.5">এটি সর্বদা বিনামূল্যে এবং নিবন্ধনের প্রয়োজন নেই</li>
+                <li className="mb-2.5">আমরা উচ্চ-মানের অডিও এবং ভিডিও ফাইল সরবরাহ করি</li>
               </ul>
             </div>
           </div>
@@ -325,17 +314,16 @@ const YouTubeDownloader = () => {
           <div
             className="md:py-8 py-6 text-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             <div>
-              <img className="inline h-[50px]" src={Quality} alt="quality"/>
+              <img className="inline" src={Quality} width="50" height="50" alt="quality"/>
               <div className="px-6 py-4">
-                <h3 className="text-2xl text-heading-clr font-bold mb-2">100% Safe and Free</h3>
+                <h3 className="text-2xl text-heading-clr font-bold mb-2">100% নিরাপদ এবং বিনামূল্যে</h3>
                 <p>
-                  Y2meta offers download mp3 and mp4 from YouTube totally free. Also this YouTube Video Downloader
-                  totally safe and secure from viruses and Malware.
+                  Y2meta YouTube থেকে mp3 এবং mp4 সম্পূর্ণ বিনামূল্যে ডাউনলোড করার অফার করে। এছাড়াও এই YouTube ভিডিও ডাউনলোডার ভাইরাস এবং ম্যালওয়্যার থেকে সম্পূর্ণ নিরাপদ এবং সুরক্ষিত।
                 </p>
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Video} alt="video"/>
+              <img className="inline" src={Video} width="50" height="50" alt="video"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Video Fast and Easily</h3>
                 <p>
@@ -346,7 +334,7 @@ const YouTubeDownloader = () => {
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Downloads} alt="download"/>
+              <img className="inline" src={Downloads} width="50" height="50" alt="download"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Download Unlimited YouTube Videos</h3>
                 <p>
@@ -356,7 +344,7 @@ const YouTubeDownloader = () => {
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Gift} alt="gift"/>
+              <img className="inline" src={Gift} width="50" height="50" alt="gift"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Support Multiple quality</h3>
                 <p>

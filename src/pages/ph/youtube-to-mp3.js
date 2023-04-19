@@ -11,7 +11,7 @@ import '../../styles/global.css';
 const YouTubeToMP3 = () => {
   const [open, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState("test");
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState("ph");
   const [openLanguage, setOpenLanguage] = useState(false);
 
   const handleLanguageChange = (language) => {
@@ -82,15 +82,15 @@ const YouTubeToMP3 = () => {
         <meta name="robots" content="noindex,nofollow"/>
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Y2meta"/>
-        <meta property="og:locale" content="en"/>
+        <meta property="og:locale" content="ph"/>
         <meta property="og:title" content="YouTube to Mp3 Converter - Y2meta"/>
         <meta
           property="og:description"
           content="Y2meta is Free YouTube to MP3 Converter, allow to MP3 from YouTube Free on PC, iPhone, and Android without install software."/>
         <meta property="og:image" content={Logo}/>
-        <meta property="og:url" content="https://y2meta.mobi/youtube-to-mp3/"/>
+        <meta property="og:url" content="https://y2meta.mobi/ph/youtube-to-mp3/"/>
         <link rel="icon" href={Logo}/>
-        <link rel="canonical" href="https://y2meta.mobi/youtube-to-mp3/"/>
+        <link rel="canonical" href="https://y2meta.mobi/ph/youtube-to-mp3/"/>
         <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/youtube-to-mp3/"/>
         <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/youtube-to-mp3/"/>
         <link rel="alternate" hrefLang="es" href="https://y2meta.mobi/es/youtube-to-mp3/"/>
@@ -119,7 +119,7 @@ const YouTubeToMP3 = () => {
           <div className="container mx-auto">
             <div className="flex justify-between items-center">
               <div className="lg:w-0 lg:flex-1">
-                <Link to="/" className="flex items-center">
+                <Link to="/ph/" className="flex items-center">
                   <img width="46" height="46" src={Logo} alt="y2meta"/>
                   <h1 className="text-2xl font-semibold w-auto z-50 pl-2">y2meta</h1>
                 </Link>
@@ -147,21 +147,21 @@ const YouTubeToMP3 = () => {
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/">
+                      to="/ph/">
                       YouTube Downloader
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp3">
+                      to="/ph/youtube-to-mp3/">
                       YouTube to MP3
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
-                      to="/youtube-to-mp4">
+                      to="/ph/youtube-to-mp4/">
                       YouTube to MP4
                     </Link>
                   </li>
@@ -202,21 +202,21 @@ const YouTubeToMP3 = () => {
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/">
+                            to="/ph/">
                             YouTube Downloader
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp3">
+                            to="/ph/youtube-to-mp3/">
                             YouTube to MP3
                           </Link>
                         </li>
                         <li>
                           <Link
                             className="-m-3 p-3 flex items-center text-heading hover:bg-heading-hover hover:text-heading-clr transition duration-300"
-                            to="/youtube-to-mp4">
+                            to="/ph/youtube-to-mp4/">
                             YouTube to MP4
                           </Link>
                         </li>
@@ -319,7 +319,7 @@ const YouTubeToMP3 = () => {
           <div
             className="md:py-8 py-6 text-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
             <div>
-              <img className="inline h-[50px]" src={Quality} alt="quality"/>
+              <img className="inline" width="50" height="50" src={Quality} alt="quality"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Easy and Fast Conversion</h3>
                 <p>
@@ -329,7 +329,7 @@ const YouTubeToMP3 = () => {
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Video} alt="video"/>
+              <img className="inline" width="50" height="50" src={Video} alt="video"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Provide High-Quality Formats</h3>
                 <p>
@@ -339,7 +339,7 @@ const YouTubeToMP3 = () => {
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Downloads} alt="download"/>
+              <img className="inline" width="50" height="50" src={Downloads} alt="download"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Conversion Without limitation</h3>
                 <p>
@@ -349,7 +349,7 @@ const YouTubeToMP3 = () => {
               </div>
             </div>
             <div>
-              <img className="inline h-[50px]" src={Gift} alt="gift"/>
+              <img className="inline" width="50" height="50" src={Gift} alt="gift"/>
               <div className="px-6 py-4">
                 <h3 className="text-2xl text-heading-clr font-bold mb-2">Compatible with All Platforms</h3>
                 <p>
