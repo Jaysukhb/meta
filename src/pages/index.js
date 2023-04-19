@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Helmet} from "react-helmet";
 import {Link, navigate} from "gatsby";
 import Logo from "../images/logo.png";
 import Quality from "../images/quality.svg";
@@ -7,7 +6,6 @@ import Video from "../images/video.svg";
 import Downloads from "../images/download.svg";
 import Gift from "../images/gift.svg";
 import '../styles/global.css';
-import {SEO} from "../components/seo";
 
 const YouTubeDownloader = () => {
   const [open, setOpen] = useState(false);
@@ -34,18 +32,18 @@ const YouTubeDownloader = () => {
   const handleClickEnter = (e) => {
     if (e.keyCode === 13) {
       if (isYtUrl(inputValue)) {
-        navigate("/download", { state: { url: inputValue }});
+        navigate("/download", {state: {url: inputValue}});
       } else {
-        navigate("/search", { state: { url: inputValue }});
+        navigate("/search", {state: {url: inputValue}});
       }
     }
   };
 
   const handleClickConvert = () => {
     if (isYtUrl(inputValue)) {
-      navigate("/download", { state: { url: inputValue }});
+      navigate("/download", {state: {url: inputValue}});
     } else {
-      navigate("/search", { state: { url: inputValue }});
+      navigate("/search", {state: {url: inputValue}});
     }
   };
 
@@ -75,46 +73,6 @@ const YouTubeDownloader = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Y2meta - Free Youtube Downloader | Download Youtube Video</title>
-        <meta
-          name="description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
-        <meta name="robots" content="noindex,nofollow"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="Y2meta"/>
-        <meta property="og:locale" content="en"/>
-        <meta property="og:title" content="Y2meta - Free Youtube Downloader | Download Youtube Video"/>
-        <meta
-          property="og:description"
-          content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
-        <meta property="og:image" content={Logo}/>
-        <meta property="og:url" content="https://y2meta.mobi/"/>
-        <link rel="icon" href={Logo}/>
-        <link rel="canonical" href="https://y2meta.mobi/"/>
-        <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/"/>
-        <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/"/>
-        <link rel="alternate" hrefLang="es" href="https://y2meta.mobi/es/"/>
-        <link rel="alternate" hrefLang="fr" href="https://y2meta.mobi/fr/"/>
-        <link rel="alternate" hrefLang="hi" href="https://y2meta.mobi/hi/"/>
-        <link rel="alternate" hrefLang="id" href="https://y2meta.mobi/id/"/>
-        <link rel="alternate" hrefLang="it" href="https://y2meta.mobi/it/"/>
-        <link rel="alternate" hrefLang="ja" href="https://y2meta.mobi/ja/"/>
-        <link rel="alternate" hrefLang="ko" href="https://y2meta.mobi/ko/"/>
-        <link rel="alternate" hrefLang="my" href="https://y2meta.mobi/my/"/>
-        <link rel="alternate" hrefLang="ms" href="https://y2meta.mobi/ms/"/>
-        <link rel="alternate" hrefLang="ph" href="https://y2meta.mobi/ph/"/>
-        <link rel="alternate" hrefLang="pt" href="https://y2meta.mobi/pt/"/>
-        <link rel="alternate" hrefLang="ru" href="https://y2meta.mobi/ru/"/>
-        <link rel="alternate" hrefLang="th" href="https://y2meta.mobi/th/"/>
-        <link rel="alternate" hrefLang="tr" href="https://y2meta.mobi/tr/"/>
-        <link rel="alternate" hrefLang="vi" href="https://y2meta.mobi/vi/"/>
-        <link rel="alternate" hrefLang="zh-cn" href="https://y2meta.mobi/zh-cn/"/>
-        <link rel="alternate" hrefLang="zh-tw" href="https://y2meta.mobi/zh-tw/"/>
-        <link rel="alternate" hrefLang="ar" href="https://y2meta.mobi/ar/"/>
-        <link rel="alternate" hrefLang="bn" href="https://y2meta.mobi/bn/"/>
-        <link rel="alternate" hrefLang="x-default" href="https://y2meta.mobi/"/>
-      </Helmet>
       <div className="mx-auto md:max-w-[890px] px-3">
         <header className="h-[68px] flex items-center top-0">
           <div className="container mx-auto">
@@ -427,5 +385,44 @@ const YouTubeDownloader = () => {
 export default YouTubeDownloader;
 
 export const Head = () => (
-  <SEO title="Page Two"  />
+  <>
+    <title>Y2meta - Free Youtube Downloader | Download Youtube Video</title>
+    <meta
+      name="description"
+      content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Y2meta"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:title" content="Y2meta - Free Youtube Downloader | Download Youtube Video"/>
+    <meta
+      property="og:description"
+      content="Y2meta is popular Free YouTube Downloader allow to Download YouTube video for Free with high quality in 1080p, 2160p, 2k, 4k, 8k without install software."/>
+    <meta property="og:image" content="../images/logo.png"/>
+    <meta property="og:url" content="https://y2meta.mobi/"/>
+    <link rel="icon" href="../images/logo.png"/>
+    <link rel="canonical" href="https://y2meta.mobi/"/>
+    <link rel="alternate" hrefLang="en" href="https://y2meta.mobi/"/>
+    <link rel="alternate" hrefLang="de" href="https://y2meta.mobi/de/"/>
+    <link rel="alternate" hrefLang="es" href="https://y2meta.mobi/es/"/>
+    <link rel="alternate" hrefLang="fr" href="https://y2meta.mobi/fr/"/>
+    <link rel="alternate" hrefLang="hi" href="https://y2meta.mobi/hi/"/>
+    <link rel="alternate" hrefLang="id" href="https://y2meta.mobi/id/"/>
+    <link rel="alternate" hrefLang="it" href="https://y2meta.mobi/it/"/>
+    <link rel="alternate" hrefLang="ja" href="https://y2meta.mobi/ja/"/>
+    <link rel="alternate" hrefLang="ko" href="https://y2meta.mobi/ko/"/>
+    <link rel="alternate" hrefLang="my" href="https://y2meta.mobi/my/"/>
+    <link rel="alternate" hrefLang="ms" href="https://y2meta.mobi/ms/"/>
+    <link rel="alternate" hrefLang="ph" href="https://y2meta.mobi/ph/"/>
+    <link rel="alternate" hrefLang="pt" href="https://y2meta.mobi/pt/"/>
+    <link rel="alternate" hrefLang="ru" href="https://y2meta.mobi/ru/"/>
+    <link rel="alternate" hrefLang="th" href="https://y2meta.mobi/th/"/>
+    <link rel="alternate" hrefLang="tr" href="https://y2meta.mobi/tr/"/>
+    <link rel="alternate" hrefLang="vi" href="https://y2meta.mobi/vi/"/>
+    <link rel="alternate" hrefLang="zh-cn" href="https://y2meta.mobi/zh-cn/"/>
+    <link rel="alternate" hrefLang="zh-tw" href="https://y2meta.mobi/zh-tw/"/>
+    <link rel="alternate" hrefLang="ar" href="https://y2meta.mobi/ar/"/>
+    <link rel="alternate" hrefLang="bn" href="https://y2meta.mobi/bn/"/>
+    <link rel="alternate" hrefLang="x-default" href="https://y2meta.mobi/"/>
+  </>
 )
