@@ -382,6 +382,7 @@ export default YouTubeDownloader;
 
 export const Head = () => (
   <>
+    <html lang="en"/>
     <title>Y2meta - Free Youtube Downloader | Download Youtube Video</title>
     <meta
       name="description"

@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    title: 'meta',
+    siteUrl: 'https://github.com/Jaysukhb/meta',
+  },
   pathPrefix: "/meta",
   plugins: [
     `gatsby-plugin-image`,
@@ -10,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
