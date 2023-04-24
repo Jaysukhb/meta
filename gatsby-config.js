@@ -27,11 +27,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        output: `/some-other-sitemap.xml`,
-        exclude: [`/search/*`, `/path/to/page`],
+        output: '/',
+        excludes: [
+          `/404/`,
+          `/download`,
+          `/search/**`,
+        ],
       },
-    }
+    },
   ],
 }
