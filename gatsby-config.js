@@ -14,7 +14,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -27,5 +26,11 @@ module.exports = {
         icon: `src/images/logo.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        excludes: ['/404', '/search', '/download',],
+      },
+    }
   ],
 }

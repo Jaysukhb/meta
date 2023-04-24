@@ -98,7 +98,7 @@ const YouTubeDownloader = () => {
                 </button>
               </div>
               <nav className="hidden md:flex">
-                <ul className="hidden md:flex">
+                <ul role="tablist" className="hidden md:flex">
                   <li>
                     <Link
                       className="text-sm py-6	px-3.5 text-heading hover:bg-heading-hover hover:text-heading-clr"
