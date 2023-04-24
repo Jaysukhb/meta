@@ -27,9 +27,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-advanced-sitemap`,
+      resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: ['/404', '/search', '/download',],
+        output: `/testsitemap.xml`,
+        excludes : ['/404', '/search', '/download/',],
       },
     }
   ],

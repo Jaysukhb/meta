@@ -7,10 +7,10 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "gatsby": "^5.8.1",
-    "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-sharp": "^5.8.1",
+    "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
     "postcss": "^8.4.22",
