@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/testsitemap.xml`,
-        excludes : ['/404', '/search', '/download/',],
+        output: `/some-other-sitemap.xml`,
+        exclude: [`/search/*`, `/path/to/page`],
       },
     }
   ],
